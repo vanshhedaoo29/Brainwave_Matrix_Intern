@@ -1,0 +1,263 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #121212;
+  line-height: 1.6;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header .wallet {
+  display: flex;
+  align-items: center;
+  background: #4cae4c;
+  color: white;
+  border-radius: 4px;
+  padding: 5px;
+  margin-right: 0.4rem;
+}
+
+header h1 {
+  color: #121212;
+}
+
+section {
+  background: #ffffffa3;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #121212;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#income-section #income-form {
+  width: 100%;
+}
+
+#income-section #income-button {
+  width: 28%;
+  text-align: center;
+}
+
+@media (width < 600px) {
+  #income-section #income-button {
+    width: 26%;
+  }
+}
+
+#income-section #income-amount {
+  width: 70%;
+}
+
+form input,
+form select,
+form button {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #ffffffa3;
+  color: #121212;
+}
+
+form button {
+  background-color: #5cb85c;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+form button:hover {
+  background-color: #4cae4c;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  background: #2c2c2c;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#income-form button {
+  width: 20%;
+}
+
+#income-form input {
+  width: 78.6%;
+}
+
+#add-expense button {
+  width: 20%;
+}
+
+#analytics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+#analytics canvas {
+  width: 100%;
+  max-width: 600px;
+  height: auto; /* Let it scale automatically */
+}
+
+#analytics h2 {
+  padding-top: 0rem;
+}
+
+#balance {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #e0e0e0;
+}
+
+#income-section {
+  background: #ffffffa3;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#search-expenses {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+  background: #ffffffa3;
+}
+
+#search-expenses input {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #ffffffa3;
+  color: #121212;
+  width: 100%;
+}
+
+#expenses li {
+  background: #ffffffa3;
+}
+
+/* Edit and Delete Button Styling */
+.edit-btn,
+.delete-btn {
+  padding: 10px 20px; /* Ensure the buttons have consistent padding */
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #b77272; /* Matching the form button color */
+}
+
+.edit-btn {
+  background-color: #ffa500; /* Orange color for Edit */
+}
+
+.edit-btn:hover {
+  background-color: #ff8c00; /* Darker Orange on hover */
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Red color for Delete */
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Darker Red on hover */
+}
+
+/* Flexbox container for Edit and Delete buttons */
+.button-container {
+  display: flex;
+  gap: 10px; /* Add space between buttons */
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+#expense-title {
+  width: 67%;
+}
+
+#expense-amount {
+  width: 31%;
+}
+
+#expense-category {
+  width: 32%;
+}
+
+#expense-date {
+  width: 31%;
+}
+
+#expense-form #expense-submit {
+  width: 34%;
+}
+
+
+@media (width < 600px) {
+  #add-expense #expense-title {
+    width: 100%;
+  }
+
+  #add-expense #expense-amount {
+    width: 48%;
+  }
+
+  #add-expense #expense-date {
+    width: 48%;
+  }
+
+  #add-expense #expense-form #expense-category {
+    width: 48%;
+  }
+
+  #add-expense #expense-submit {
+    width: 48%;
+  }
+}

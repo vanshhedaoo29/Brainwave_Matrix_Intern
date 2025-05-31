@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+
+  <body>
+    <div id="app">
+      <header>
+        <div class="wallet">
+          <span class="material-symbols-sharp"> wallet </span>
+        </div>
+
+        <h1>Expense Tracker</h1>
+      </header>
+
+      <main>
+        <!-- Add Income Section -->
+        <section id="income-section">
+          <h2>Add Income</h2>
+          <form id="income-form">
+            <input
+              type="number"
+              id="income-amount"
+              placeholder="Income Amount"
+              required
+            />
+            <button id="income-button" type="submit">Add Income</button>
+          </form>
+        </section>
+
+        <!-- Current Balance -->
+        <section id="balance">
+          <h2>Current Balance: ₹<span id="balance-amount">0.00</span></h2>
+        </section>
+
+        <!-- Add Expense Section -->
+        <section id="add-expense">
+          <h2>Add Expense</h2>
+          <form id="expense-form">
+            <input
+              type="text"
+              id="expense-title"
+              placeholder="Title"
+              required
+            />
+            <input
+              type="number"
+              id="expense-amount"
+              placeholder="Amount"
+              required
+            />
+            <input type="date" name="" id="expense-date" />
+            <select id="expense-category">
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Shopping">Shopping</option>
+              <option value="Bills">Bills</option>
+              <option value="Education">Education</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Health">Health</option>
+              <option value="Others">Others</option>
+            </select>
+            <button type="submit" id="expense-submit">Add Expense</button>
+          </form>
+        </section>
+
+        <!-- Expense List Section -->
+        <section id="expense-list">
+          <h2>Expense List</h2>
+
+          <!-- Search Expenses Section -->
+          <div id="search-expenses">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search expenses..."
+              oninput="filterExpenses()"
+            />
+          </div>
+
+          <ul id="expenses">
+            Example expense item
+          </ul>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics">
+          <h2>Analytics</h2>
+          <canvas height="100" id="expense-chart"></canvas>
+        </section>
+      </main>
+
+      <footer>
+        <p>&copy; Vansh Hedaoo</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
